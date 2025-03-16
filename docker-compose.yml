@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama/models
+  app:
+    build: .
+    ports:
+      - "7860:7860"
+    depends_on:
+      - ollama
+volumes:
+  ollama_models:
+  
