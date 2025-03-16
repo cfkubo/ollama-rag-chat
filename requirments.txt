@@ -1,0 +1,6 @@
+llama-index
+ollama
+gradio
+sentence-transformers
+pypdf
+python-docx
