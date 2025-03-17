@@ -1,0 +1,8 @@
+llama-index
+ollama
+gradio
+sentence-transformers
+pypdf
+python-docx
+llama_index.llms.ollama
+llama_index.embeddings.huggingface
