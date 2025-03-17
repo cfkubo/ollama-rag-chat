@@ -1,4 +1,21 @@
-version: '3.8'
+# version: '3.8'
+# services:
+#   ollama:
+#     image: ollama/ollama
+#     ports:
+#       - "11434:11434"
+#     volumes:
+#       - ollama_models:/root/.ollama/models
+#   app:
+#     build: .
+#     ports:
+#       - "7860:7860"
+#     depends_on:
+#       - ollama
+# volumes:
+#   ollama_models:
+  
+# version: '3.8'
 services:
   ollama:
     image: ollama/ollama
@@ -6,12 +23,14 @@ services:
       - "11434:11434"
     volumes:
       - ollama_models:/root/.ollama/models
+    # command: ollama run llama2:latest
   app:
     build: .
     ports:
       - "7860:7860"
     depends_on:
       - ollama
+    environment:
+      - HUGGINGFACE_TOKEN=${HUGGINGFACE_TOKEN} # Or your actual token if you don't want to use .env
 volumes:
-  ollama_models:
-  
+  ollama_models: 
