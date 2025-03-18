@@ -35,10 +35,17 @@ python3 rag-ollama-all-local.py
 ```
 
 
+
+#### Docker commands
+> Remove all docker containers 
 ```
 docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 ```
-
+> Remove all docker volumes
+```
 docker system prune -a --volumes
+```
 
+```
 docker volume rm $(docker volume ls -q)
+```
