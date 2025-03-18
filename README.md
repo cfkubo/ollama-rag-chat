@@ -3,7 +3,8 @@
 #### Requiremnts
 - Python 3.13.x
 - Docker
-- Gradio >=4.0.0
+- hugginface account
+- ollama models
 
 #### Running it locally
 
