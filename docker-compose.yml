@@ -22,8 +22,8 @@ services:
     ports:
       - "11434:11434"
     volumes:
-      - ollama_models:/root/.ollama/models
-    # command: ollama run llama2:latest
+      - ollama_models:/root/.ollama/
+    # command: ollama serve
   app:
     build: .
     ports:
