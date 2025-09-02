@@ -23,7 +23,7 @@ services:
       - "11434:11434"
     volumes:
       - ollama_models:/root/.ollama/
-    # command: ollama serve
+    # command: ollama run codegemma
   app:
     build: .
     ports:
